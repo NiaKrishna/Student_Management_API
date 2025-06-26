@@ -128,6 +128,10 @@ def get_students_in_class(class_id: int, db: Session = Depends(get_db)):
             })
     return student_list
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello"}
+
 
 
 
